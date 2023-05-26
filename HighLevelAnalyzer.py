@@ -166,7 +166,7 @@ class Hla(HighLevelAnalyzer):
             if (mosi_int == 0b01100000):
                 self.following_type = 1
                 return AnalyzerFrame('read_rx_pl_wid', frame.start_time, frame.end_time)
-				
-	    # NOP
-	    if (mosi_int == 0b11111111):
-		return AnalyzerFrame('nop', frame.start_time, frame.end_time)
+
+            # NOP
+            if (mosi_int == 0b11111111):
+                return AnalyzerFrame('nop', frame.start_time, frame.end_time)
